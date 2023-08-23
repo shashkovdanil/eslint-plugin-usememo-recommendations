@@ -1,0 +1,52 @@
+{
+  "name": "eslint-plugin-usememo-recommendations",
+  "description": "ESLint plugin for avoiding useMemo overdose",
+  "version": "1.0.0",
+  "homepage": "https://github.com/shashkovdanil/eslint-plugin-usememo-recommendations",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shashkovdanil/eslint-plugin-usememo-recommendations"
+  },
+  "author": {
+    "name": "Danil Shashkov",
+    "email": "shashkovdanil@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "performance",
+    "react-hooks"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "./dist"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^6.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.4",
+    "clean-publish": "^4.2.0",
+    "eslint": "^8.47.0",
+    "prettier": "^3.0.2",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  }
+}
