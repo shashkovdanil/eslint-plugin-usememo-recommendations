@@ -19,7 +19,8 @@
     "react-hooks"
   ],
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "release": "clean-publish"
   },
   "publishConfig": {
     "access": "public"
