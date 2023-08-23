@@ -1,4 +1,5 @@
 import { ESLintUtils } from '@typescript-eslint/utils'
+import { isInsideComponent } from '../utils/isInsideComponent'
 
 const createRule = ESLintUtils.RuleCreator(
   () =>
@@ -63,6 +64,8 @@ export default createRule({
         }
       },
       CallExpression(node) {
+        if (!isInsideComponent(node)) return
+
         if (
           node.callee.type === 'Identifier' &&
           node.callee.name === 'useMemo' &&
@@ -104,6 +107,8 @@ export default createRule({
         }
       },
       ForStatement(node) {
+        if (!isInsideComponent(node)) return
+
         if (!insideMemoCallback) {
           if (node.body.type === 'BlockStatement') {
             const bodyStatements = node.body.body
@@ -120,6 +125,8 @@ export default createRule({
         }
       },
       WhileStatement(node) {
+        if (!isInsideComponent(node)) return
+
         if (!insideMemoCallback) {
           if (node.body.type === 'BlockStatement') {
             const bodyStatements = node.body.body
@@ -136,6 +143,8 @@ export default createRule({
         }
       },
       MemberExpression(node) {
+        if (!isInsideComponent(node)) return
+
         if (!insideMemoCallback) {
           if (
             node.object.type === 'CallExpression' &&

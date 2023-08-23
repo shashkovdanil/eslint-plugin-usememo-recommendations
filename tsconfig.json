@@ -10,7 +10,8 @@
     "types": ["node"],
     "allowJs": true,
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+    "noImplicitAny": false
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]

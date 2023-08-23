@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-usememo-recommendations",
   "description": "ESLint plugin for avoiding useMemo overdose",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "homepage": "https://github.com/shashkovdanil/eslint-plugin-usememo-recommendations",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build": "vite build",
-    "release": "clean-publish"
+    "release": "npm run build && clean-publish"
   },
   "publishConfig": {
     "access": "public"
