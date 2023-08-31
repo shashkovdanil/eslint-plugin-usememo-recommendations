@@ -1,6 +1,6 @@
 # ESLint Plugin UseMemo Recommendations
 
-Detect potentially heavy operations in React components and recommend using useMemo.
+Detect potentially heavy operations in React components and recommend using useMemo. Inspired by article [https://edvins.io/usememo-overdose](https://edvins.io/usememo-overdose)
 
 ## Rule Details
 
